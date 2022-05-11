@@ -1,12 +1,12 @@
 .toolbar-root {
     display: flex;
-    flex-direction: 'row';
-    align-items: 'center';
-    justify-content: 'space-between';
-    padding-left: '2rem';
-    padding-right: '2rem';
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .menu-icon {
-    margin-left: '2rem';
+    margin-left: 2rem;
 }

@@ -1,6 +1,12 @@
 import './NavBar.css';
 import React, { useState } from 'react';
-import { AppBar, Button, IconButton, Menu as NavMenu } from '@material-ui/core';
+import {
+  AppBar,
+  Button,
+  IconButton,
+  Menu as NavMenu,
+  MenuItem,
+} from '@material-ui/core';
 import Menu from '@material-ui/icons/Menu';
 
 export const NavBar = (): JSX.Element => {
@@ -8,24 +14,27 @@ export const NavBar = (): JSX.Element => {
 
   return (
     <AppBar>
-      <div className='toolbar-root'>
+      <div className="toolbar-root">
         <IconButton
-          className='menu-icon'
-          edge='start'
-          color='inherit'
-          aria-label='menu'
+          className="menu-icon"
+          edge="start"
+          color="inherit"
+          aria-label="menu"
           onClick={(e) => setAnchorEl(e.currentTarget)}
         >
           <Menu />
         </IconButton>
         <NavMenu
-          id='simple-menu'
+          id="simple-menu"
           anchorEl={anchorEl}
           keepMounted
           open={Boolean(anchorEl)}
           onClose={() => setAnchorEl(null)}
-        />
-        <Button color='inherit'>Login</Button>
+        >
+          <MenuItem>Racers</MenuItem>
+          <MenuItem>Races</MenuItem>
+        </NavMenu>
+        <Button color="inherit">Login</Button>
       </div>
     </AppBar>
   );
