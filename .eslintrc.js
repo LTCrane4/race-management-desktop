@@ -21,6 +21,7 @@ module.exports = {
       'object-curly-newline': 'off',
       indent: ['error', 2],
       'import/extensions': 'off',
+      'jsx-quotes': ['error', 'prefer-double'],
     },
     settings: {
       'import/resolver': {
